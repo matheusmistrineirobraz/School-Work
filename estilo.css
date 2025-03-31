@@ -9,8 +9,47 @@ body{
 }
 
 header{
-    height: 4.5rem;
+    height: 8.5rem;
     background-color: #13293D;
     color: lightgray;
     font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topo{
+    font-size: 3.5rem;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 7.5rem;
+}
+
+.rodape{
+    font-size: 3.5rem;
+}
+
+.body{
+    width: 93%;
+    height: 100%auto;
+    margin: 5rem;
+    border: 2rem solid black;
+    padding: 2.3rem;
+}
+
+.body-calculator{
+    background-color: whitesmoke;
+    display: flex;
+    height: 20rem;
+    width: 40rem;
+    border-radius: 1rem;
 }
