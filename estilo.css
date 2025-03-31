@@ -9,5 +9,8 @@ body{
 }
 
 header{
-    
+    height: 4.5rem;
+    background-color: #13293D;
+    color: lightgray;
+    font-family: 'Times New Roman', Times, serif;
 }
