@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Técnico - Desenvolvimento de Sistemas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Interativo com Canvas -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <!-- Menu de Navegação Fixo -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">💻 Dev Systems</div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#o-que-faz" class="nav-link">O que faz?</a></li>
+                <li><a href="#game1" class="nav-link">Decifre o Código</a></li>
+                <li><a href="#por-que" class="nav-link">Por quê?</a></li>
+                <li><a href="#quiz" class="nav-link">Quiz Tech</a></li>
+                <li><a href="#inscricao" class="nav-link">Inscreva-se</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção 1: Início -->
+    <section id="inicio" class="section hero-section">
+        <div class="container">
+            <h1 class="hero-title animate-fade-in">O Futuro é Digital!</h1>
+            <p class="hero-subtitle animate-fade-in-delay">Você já pensou em criar seus próprios jogos, apps e sites?</p>
+            <p class="hero-text animate-fade-in-delay-2">Descubra o mundo da programação e transforme suas ideias em realidade!</p>
+            <a href="#o-que-faz" class="cta-button pulse">Explorar Agora</a>
+        </div>
+    </section>
+
+    <!-- Seção 2: O que faz um Desenvolvedor? -->
+    <section id="o-que-faz" class="section">
+        <div class="container">
+            <h2 class="section-title">O que faz um Desenvolvedor de Sistemas?</h2>
+            <div class="cards-grid">
+                <div class="card slide-in-left">
+                    <div class="card-icon">🌐</div>
+                    <h3>Cria Sites</h3>
+                    <p>Desenvolve páginas web incríveis e responsivas que milhões de pessoas podem acessar.</p>
+                </div>
+                <div class="card slide-in-bottom">
+                    <div class="card-icon">📱</div>
+                    <h3>Desenvolve Apps</h3>
+                    <p>Cria aplicativos para celular e computador que facilitam a vida das pessoas.</p>
+                </div>
+                <div class="card slide-in-right">
+                    <div class="card-icon">🤖</div>
+                    <h3>Automatiza Tarefas</h3>
+                    <p>Programa robôs e sistemas que fazem trabalhos repetitivos automaticamente.</p>
+                </div>
+                <div class="card slide-in-left">
+                    <div class="card-icon">🎮</div>
+                    <h3>Cria Jogos</h3>
+                    <p>Desenvolve jogos digitais com gráficos, sons e mecânicas divertidas.</p>
+                </div>
+                <div class="card slide-in-bottom">
+                    <div class="card-icon">💡</div>
+                    <h3>Resolve Problemas</h3>
+                    <p>Usa a lógica e criatividade para encontrar soluções tecnológicas inovadoras.</p>
+                </div>
+                <div class="card slide-in-right">
+                    <div class="card-icon">🚀</div>
+                    <h3>Inova</h3>
+                    <p>Cria tecnologias que não existem e muda o futuro da sociedade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 3: Minigame 1 - Decifre o Código -->
+    <section id="game1" class="section game-section">
+        <div class="container">
+            <h2 class="section-title">🎯 Minigame: Decifre o Código</h2>
+            <p class="game-instructions">Arraste as opções corretas para completar o código CSS e mudar a cor do botão!</p>
+            
+            <div class="game-container">
+                <div class="code-editor">
+                    <div class="code-line">
+                        <span class="code-keyword">button</span> {
+                    </div>
+                    <div class="code-line indent">
+                        <span class="code-property">background-color:</span> 
+                        <div class="drop-zone" data-correct="blue" id="drop1">
+                            <span class="placeholder">?</span>
+                        </div>;
+                    </div>
+                    <div class="code-line indent">
+                        <span class="code-property">color:</span> 
+                        <div class="drop-zone" data-correct="white" id="drop2">
+                            <span class="placeholder">?</span>
+                        </div>;
+                    </div>
+                    <div class="code-line indent">
+                        <span class="code-property">padding:</span> 
+                        <div class="drop-zone" data-correct="10px" id="drop3">
+                            <span class="placeholder">?</span>
+                        </div>;
+                    </div>
+                    <div class="code-line">
+                        }
+                    </div>
+                </div>
+
+                <div class="draggable-options">
+                    <div class="draggable" draggable="true" data-value="blue">#3378ad</div>
+                    <div class="draggable" draggable="true" data-value="white">white</div>
+                    <div class="draggable" draggable="true" data-value="10px">10px 20px</div>
+                    <div class="draggable" draggable="true" data-value="wrong1">red</div>
+                    <div class="draggable" draggable="true" data-value="wrong2">5px</div>
+                    <div class="draggable" draggable="true" data-value="wrong3">black</div>
+                </div>
+
+                <div class="preview-area">
+                    <p>Resultado:</p>
+                    <button id="previewButton" class="preview-button">Botão de Teste</button>
+                </div>
+
+                <div id="game1-feedback" class="game-feedback"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 4: Por que fazer o curso técnico? -->
+    <section id="por-que" class="section">
+        <div class="container">
+            <h2 class="section-title">Por que fazer o Curso Técnico?</h2>
+            <div class="flip-cards-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="flip-icon">📚</div>
+                            <h3>Aprenda na Prática</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Você vai colocar a mão na massa desde o primeiro dia, criando projetos reais e construindo seu portfólio!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="flip-icon">💼</div>
+                            <h3>Prepare-se para o Mercado</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>O mercado de tecnologia está em alta! Desenvolvedores são muito procurados e bem remunerados.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="flip-icon">🎨</div>
+                            <h3>Crie seu Próprio Futuro</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Tenha liberdade para trabalhar de onde quiser, criar seus próprios projetos e até empreender!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="flip-icon">🏆</div>
+                            <h3>Certificação Reconhecida</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Obtenha um diploma técnico reconhecido pelo MEC e destaque-se no mercado de trabalho!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 5: Minigame 2 - Quiz Tech -->
+    <section id="quiz" class="section game-section">
+        <div class="container">
+            <h2 class="section-title">🧠 Quiz Tech: Teste seus Conhecimentos!</h2>
+            
+            <div class="quiz-container">
+                <div id="quiz-content">
+                    <div class="quiz-header">
+                        <div class="quiz-progress">
+                            <span>Pergunta <span id="current-question">1</span> de <span id="total-questions">5</span></span>
+                        </div>
+                        <div class="quiz-score">
+                            Pontuação: <span id="score">0</span>
+                        </div>
+                    </div>
+
+                    <div id="question-container">
+                        <h3 id="question-text" class="question-text"></h3>
+                        <div id="options-container" class="options-container"></div>
+                    </div>
+
+                    <div id="quiz-feedback" class="quiz-feedback"></div>
+                    <button id="next-question" class="quiz-button" style="display: none;">Próxima Pergunta</button>
+                </div>
+
+                <div id="quiz-result" class="quiz-result" style="display: none;">
+                    <h3>Quiz Finalizado!</h3>
+                    <p class="result-score">Sua pontuação: <span id="final-score">0</span> de <span id="max-score">5</span></p>
+                    <p id="result-message" class="result-message"></p>
+                    <button id="restart-quiz" class="quiz-button">Jogar Novamente</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 6: Chamada para Ação -->
+    <section id="inscricao" class="section cta-section">
+        <div class="container">
+            <h2 class="section-title">Comece sua Jornada Agora!</h2>
+            <p class="cta-text">Não perca a oportunidade de fazer parte da revolução digital. Inscreva-se no Curso Técnico de Desenvolvimento de Sistemas e transforme seu futuro!</p>
+            <div class="cta-buttons">
+                <button class="cta-button-large pulse">Inscreva-se Agora</button>
+                <button class="cta-button-secondary">Saiba Mais</button>
+            </div>
+            <div class="contact-info">
+                <p>📧 contato@cursodev.com.br | 📞 (11) 1234-5678</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Curso Técnico de Desenvolvimento de Sistemas. Todos os direitos reservados.</p>
+            <p>Feito com 💙 para inspirar futuros desenvolvedores!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
